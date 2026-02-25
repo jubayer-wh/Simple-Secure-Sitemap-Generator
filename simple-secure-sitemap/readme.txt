@@ -3,13 +3,13 @@ Plugin URI: https://github.com/jubayer-wh/Simple-Secure-Sitemap-Generator
 Contributors: jubayer-wh
 Tags: sitemap, xml sitemap, seo, security, performance
 Requires at least: 5.8
-Tested up to: 6.6
+Tested up to: 6.9
 Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Generate a secure, customizable, and lightweight XML sitemap with post type filtering, manual regeneration, and optional search engine ping.
+Secure, lightweight XML sitemap plugin with post type filtering, manual regenerate, and optional search engine ping.
 
 Author: Jubayer Hossain
 Website: https://webkih.com

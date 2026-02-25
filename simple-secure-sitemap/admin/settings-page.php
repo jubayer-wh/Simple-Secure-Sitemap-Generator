@@ -15,17 +15,20 @@ $public_post_types = get_post_types(
 	),
 	'objects'
 );
+
+$settings_updated = filter_input( INPUT_GET, 'settings-updated', FILTER_VALIDATE_BOOLEAN );
+$sss_regenerated  = filter_input( INPUT_GET, 'sss_regenerated', FILTER_VALIDATE_BOOLEAN );
 ?>
 <div class="wrap">
 	<h1><?php echo esc_html__( 'Simple Secure Sitemap Generator', 'simple-secure-sitemap' ); ?></h1>
 
-	<?php if ( isset( $_GET['settings-updated'] ) ) : ?>
+	<?php if ( $settings_updated ) : ?>
 		<div class="notice notice-success is-dismissible">
 			<p><?php echo esc_html__( 'Settings saved.', 'simple-secure-sitemap' ); ?></p>
 		</div>
 	<?php endif; ?>
 
-	<?php if ( isset( $_GET['sss_regenerated'] ) ) : ?>
+	<?php if ( $sss_regenerated ) : ?>
 		<div class="notice notice-success is-dismissible">
 			<p><?php echo esc_html__( 'Sitemap regenerated and ping request sent.', 'simple-secure-sitemap' ); ?></p>
 		</div>

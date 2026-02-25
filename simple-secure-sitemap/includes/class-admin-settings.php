@@ -38,19 +38,9 @@ class SSS_Admin_Settings {
 	 * Constructor.
 	 */
 	private function __construct() {
-		add_action( 'init', array( $this, 'load_textdomain' ) );
 		add_action( 'admin_menu', array( $this, 'register_settings_page' ) );
 		add_action( 'admin_init', array( $this, 'register_settings' ) );
 		add_action( 'admin_post_sss_regenerate_sitemap', array( $this, 'handle_manual_regeneration' ) );
-	}
-
-	/**
-	 * Load plugin textdomain.
-	 *
-	 * @return void
-	 */
-	public function load_textdomain() {
-		load_plugin_textdomain( 'simple-secure-sitemap', false, dirname( plugin_basename( SSS_PLUGIN_FILE ) ) . '/languages' );
 	}
 
 	/**
