@@ -11,11 +11,12 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Secure, lightweight XML sitemap plugin with post type filtering, manual regenerate, and optional search engine ping.
 
+== Description ==
+
+
 Author: Jubayer Hossain
 Website: https://webkih.com
 GitHub: https://github.com/jubayer-wh/Simple-Secure-Sitemap-Generator
-
-== Description ==
 
 Simple Secure Sitemap Generator provides a focused alternative to larger SEO suites:
 
