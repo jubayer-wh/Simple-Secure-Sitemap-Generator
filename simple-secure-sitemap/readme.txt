@@ -1,6 +1,6 @@
 === Simple Secure Sitemap Generator ===
 Plugin URI: https://github.com/jubayer-wh/Simple-Secure-Sitemap-Generator
-Contributors: jubayer-wh
+Contributors: jubayer1
 Tags: sitemap, xml sitemap, seo, security, performance
 Requires at least: 5.8
 Tested up to: 6.9
