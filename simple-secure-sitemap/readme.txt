@@ -50,6 +50,10 @@ Your sitemap is available at `https://example.com/sitemap.xml`.
 
 Yes. Settings are stored per-site and the plugin works on multisite installations.
 
+= What happens if I uninstall the plugin? =
+
+Plugin settings are intentionally preserved for reinstall scenarios. Note that `/sitemap.xml` is served by this plugin, so the endpoint is unavailable while the plugin is inactive or removed.
+
 == Changelog ==
 
 = 1.0.0 =

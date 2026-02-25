@@ -1,6 +1,8 @@
 <?php
 /**
- * Uninstall cleanup.
+ * Uninstall routine.
+ *
+ * Keep plugin data to support reinstall scenarios.
  *
  * @package SimpleSecureSitemap
  */
@@ -9,4 +11,4 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
 
-delete_option( 'sss_settings' );
+// Intentionally left blank: plugin data is preserved on uninstall.
