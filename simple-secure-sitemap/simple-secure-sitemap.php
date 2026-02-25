@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name:       Simple Secure Sitemap Generator
- * Plugin URI:        https://example.com/plugins/simple-secure-sitemap/
+ * Plugin URI:        https://github.com/jubayer-wh/Simple-Secure-Sitemap-Generator
  * Description:       Lightweight and secure XML sitemap generator with post type filters, manual regeneration, and optional search engine ping.
  * Version:           1.0.0
  * Requires at least: 5.8
  * Requires PHP:      7.4
- * Author:            Simple Secure Sitemap Team
- * Author URI:        https://example.com
+ * Author:            Jubayer Hossain
+ * Author URI:        https://webkih.com
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       simple-secure-sitemap
