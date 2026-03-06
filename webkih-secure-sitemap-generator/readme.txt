@@ -1,5 +1,5 @@
-=== Webkih Secure Sitemap Generator ===
-Plugin URI: https://github.com/jubayer-wh/Simple-Secure-Sitemap-Generator
+=== WEBKIH Secure Sitemap Generator ===
+Plugin URI: https://github.com/jubayer-wh/WEBKIH-Secure-Sitemap-Generator
 Contributors: jubayer1
 Tags: sitemap, xml sitemap, seo, security, performance
 Requires at least: 5.8
@@ -16,7 +16,7 @@ Secure, lightweight XML sitemap plugin with post type filtering, manual regenera
 
 Author: Jubayer Hossain
 Website: https://webkih.com
-GitHub: https://github.com/jubayer-wh/Simple-Secure-Sitemap-Generator
+GitHub: https://github.com/jubayer-wh/WEBKIH-Secure-Sitemap-Generator
 
 Webkih Secure Sitemap Generator provides a focused alternative to larger SEO suites:
 
