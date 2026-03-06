@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Webkih Secure Sitemap Generator
- * Plugin URI:        https://github.com/jubayer-wh/Simple-Secure-Sitemap-Generator
+ * Plugin URI:        https://github.com/jubayer-wh/WEBKIH-Secure-Sitemap-Generator
  * Description:       Lightweight and secure XML sitemap generator with post type filters, manual regeneration, and optional search engine ping.
  * Version:           1.0.0
  * Requires at least: 5.8
