@@ -1,4 +1,4 @@
-=== Simple Secure Sitemap Generator ===
+=== Webkih Secure Sitemap Generator ===
 Plugin URI: https://github.com/jubayer-wh/Simple-Secure-Sitemap-Generator
 Contributors: jubayer1
 Tags: sitemap, xml sitemap, seo, security, performance
@@ -18,7 +18,7 @@ Author: Jubayer Hossain
 Website: https://webkih.com
 GitHub: https://github.com/jubayer-wh/Simple-Secure-Sitemap-Generator
 
-Simple Secure Sitemap Generator provides a focused alternative to larger SEO suites:
+Webkih Secure Sitemap Generator provides a focused alternative to larger SEO suites:
 
 * Generates XML sitemap at `/sitemap.xml`
 * Supports posts, pages, and public custom post types
@@ -31,7 +31,7 @@ Simple Secure Sitemap Generator provides a focused alternative to larger SEO sui
 
 == Installation ==
 
-1. Upload the `simple-secure-sitemap` folder to `/wp-content/plugins/`.
+1. Upload the `webkih-secure-sitemap-generator` folder to `/wp-content/plugins/`.
 2. Activate the plugin through the **Plugins** screen in WordPress.
 3. Go to **Settings → Sitemap Generator**.
 4. Configure options and save.

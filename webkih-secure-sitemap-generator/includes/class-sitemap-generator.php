@@ -2,7 +2,7 @@
 /**
  * Sitemap generation and routing.
  *
- * @package SimpleSecureSitemap
+ * @package WebkihSecureSitemapGenerator
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,19 +12,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Main sitemap generator class.
  */
-class SSS_Sitemap_Generator {
+class WBSSG_Sitemap_Generator {
 
 	/**
 	 * Singleton instance.
 	 *
-	 * @var SSS_Sitemap_Generator|null
+	 * @var WBSSG_Sitemap_Generator|null
 	 */
 	private static $instance = null;
 
 	/**
 	 * Get singleton instance.
 	 *
-	 * @return SSS_Sitemap_Generator
+	 * @return WBSSG_Sitemap_Generator
 	 */
 	public static function get_instance() {
 		if ( null === self::$instance ) {
@@ -52,7 +52,7 @@ class SSS_Sitemap_Generator {
 	public static function add_rewrite_rule() {
 		add_rewrite_rule(
 			'^sitemap\.xml$',
-			'index.php?sss_sitemap=1',
+			'index.php?wbssg_sitemap=1',
 			'top'
 		);
 	}
@@ -65,7 +65,7 @@ class SSS_Sitemap_Generator {
 	 * @return array
 	 */
 	public function register_query_var( $vars ) {
-		$vars[] = 'sss_sitemap';
+		$vars[] = 'wbssg_sitemap';
 		return $vars;
 	}
 
@@ -75,7 +75,7 @@ class SSS_Sitemap_Generator {
 	 * @return void
 	 */
 	public function maybe_render_sitemap() {
-		if ( '1' !== get_query_var( 'sss_sitemap' ) ) {
+		if ( '1' !== get_query_var( 'wbssg_sitemap' ) ) {
 			return;
 		}
 
@@ -250,7 +250,7 @@ class SSS_Sitemap_Generator {
 			'ping_search_engines' => 1,
 		);
 
-		$settings = get_option( 'sss_settings', array() );
+		$settings = get_option( 'wbssg_settings', array() );
 		if ( ! is_array( $settings ) ) {
 			$settings = array();
 		}

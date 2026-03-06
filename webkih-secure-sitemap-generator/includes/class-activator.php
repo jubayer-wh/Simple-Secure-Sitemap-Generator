@@ -2,7 +2,7 @@
 /**
  * Activation logic for the plugin.
  *
- * @package SimpleSecureSitemap
+ * @package WebkihSecureSitemapGenerator
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Handles plugin activation.
  */
-class SSS_Activator {
+class WBSSG_Activator {
 
 	/**
 	 * Activate plugin.
@@ -28,11 +28,11 @@ class SSS_Activator {
 			'ping_search_engines' => 1,
 		);
 
-		if ( false === get_option( 'sss_settings', false ) ) {
-			add_option( 'sss_settings', $default_settings );
+		if ( false === get_option( 'wbssg_settings', false ) ) {
+			add_option( 'wbssg_settings', $default_settings );
 		}
 
-		SSS_Sitemap_Generator::add_rewrite_rule();
+		WBSSG_Sitemap_Generator::add_rewrite_rule();
 		flush_rewrite_rules();
 	}
 }

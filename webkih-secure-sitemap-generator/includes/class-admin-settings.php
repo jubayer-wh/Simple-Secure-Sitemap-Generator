@@ -2,7 +2,7 @@
 /**
  * Admin settings page handling.
  *
- * @package SimpleSecureSitemap
+ * @package WebkihSecureSitemapGenerator
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,19 +12,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Admin settings controller.
  */
-class SSS_Admin_Settings {
+class WBSSG_Admin_Settings {
 
 	/**
 	 * Singleton instance.
 	 *
-	 * @var SSS_Admin_Settings|null
+	 * @var WBSSG_Admin_Settings|null
 	 */
 	private static $instance = null;
 
 	/**
 	 * Get singleton instance.
 	 *
-	 * @return SSS_Admin_Settings
+	 * @return WBSSG_Admin_Settings
 	 */
 	public static function get_instance() {
 		if ( null === self::$instance ) {
@@ -40,7 +40,7 @@ class SSS_Admin_Settings {
 	private function __construct() {
 		add_action( 'admin_menu', array( $this, 'register_settings_page' ) );
 		add_action( 'admin_init', array( $this, 'register_settings' ) );
-		add_action( 'admin_post_sss_regenerate_sitemap', array( $this, 'handle_manual_regeneration' ) );
+		add_action( 'admin_post_wbssg_regenerate_sitemap', array( $this, 'handle_manual_regeneration' ) );
 	}
 
 	/**
@@ -50,10 +50,10 @@ class SSS_Admin_Settings {
 	 */
 	public function register_settings_page() {
 		add_options_page(
-			esc_html__( 'Sitemap Generator', 'simple-secure-sitemap' ),
-			esc_html__( 'Sitemap Generator', 'simple-secure-sitemap' ),
+			esc_html__( 'Sitemap Generator', 'webkih-secure-sitemap-generator' ),
+			esc_html__( 'Sitemap Generator', 'webkih-secure-sitemap-generator' ),
 			'manage_options',
-			'simple-secure-sitemap',
+			'webkih-secure-sitemap-generator',
 			array( $this, 'render_settings_page' )
 		);
 	}
@@ -65,8 +65,8 @@ class SSS_Admin_Settings {
 	 */
 	public function register_settings() {
 		register_setting(
-			'sss_settings_group',
-			'sss_settings',
+			'wbssg_settings_group',
+			'wbssg_settings',
 			array(
 				'type'              => 'array',
 				'sanitize_callback' => array( $this, 'sanitize_settings' ),
@@ -131,9 +131,9 @@ class SSS_Admin_Settings {
 			return;
 		}
 
-		$generator = SSS_Sitemap_Generator::get_instance();
+		$generator = WBSSG_Sitemap_Generator::get_instance();
 		$settings  = $generator->get_settings();
-		include SSS_PLUGIN_PATH . 'admin/settings-page.php';
+		include WBSSG_PLUGIN_PATH . 'admin/settings-page.php';
 	}
 
 	/**
@@ -143,19 +143,19 @@ class SSS_Admin_Settings {
 	 */
 	public function handle_manual_regeneration() {
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_die( esc_html__( 'You are not allowed to perform this action.', 'simple-secure-sitemap' ) );
+			wp_die( esc_html__( 'You are not allowed to perform this action.', 'webkih-secure-sitemap-generator' ) );
 		}
 
-		if ( ! isset( $_POST['sss_nonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['sss_nonce'] ) ), 'sss_save_settings_nonce' ) ) {
-			wp_die( esc_html__( 'Invalid security token.', 'simple-secure-sitemap' ) );
+		if ( ! isset( $_POST['wbssg_nonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['wbssg_nonce'] ) ), 'wbssg_save_settings_nonce' ) ) {
+			wp_die( esc_html__( 'Invalid security token.', 'webkih-secure-sitemap-generator' ) );
 		}
 
-		SSS_Sitemap_Generator::get_instance()->regenerate_sitemap();
+		WBSSG_Sitemap_Generator::get_instance()->regenerate_sitemap();
 
 		$redirect_url = add_query_arg(
 			array(
-				'page'               => 'simple-secure-sitemap',
-				'sss_regenerated'    => 1,
+				'page'               => 'webkih-secure-sitemap-generator',
+				'wbssg_regenerated'    => 1,
 			),
 			admin_url( 'options-general.php' )
 		);

@@ -4,7 +4,7 @@
  *
  * Keep plugin data to support reinstall scenarios.
  *
- * @package SimpleSecureSitemap
+ * @package WebkihSecureSitemapGenerator
  */
 
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
